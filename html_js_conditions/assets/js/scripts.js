@@ -53,3 +53,37 @@ if (typeof Salary == typeof TaxableSalary && Salary >= TaxableSalary) {
 } else {
   console.log("Your salary is for poor people!");
 }
+
+let PastorJhunAge = 50;
+let PastAge = 49;
+
+
+if (PastorJhunAge == PastAge) {
+  console.log("you are 50 years old")
+} else {
+  console.log("this is your past age as 49 years old")
+}
+
+let GelilioSiblings = 24
+let firstchild = 24
+let secondchild = 23
+let thirdchild = 18
+
+if (GelilioSiblings < firstchild){
+  console.log("you are the first child 24 years old")
+} else if (secondchild >= thirdchild){
+  console.log ("you are the secondchild 23 years old")
+} else  {
+  console.log("you are the thirdchild 18 years old")
+}
+
+
+let Kuya= 50;
+let Bunso = 47;
+
+if (Kuya >= Bunso) {
+  console.log("YOU DON'T HAVE THE DOMINION!");
+  document.getElementById("h1-message").innerText = "YOU DON'T HAVE THE DOMINION!";
+} else {
+  console.log("You HAVE THE DOMINION!");
+}
