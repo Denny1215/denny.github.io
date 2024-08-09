@@ -16,5 +16,5 @@ let name = [...arrName, "M"]; //spread operator
 //destructuring
 let [denyFname, dennyLname, jessFname, jessLname] = arrName;
 
-let a = 5;
-let b = 10;
+let a = 5; // a => 10
+let b = 10; // b => 5

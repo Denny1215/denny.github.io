@@ -49,31 +49,28 @@ let arrFruits = [];
 document.getElementById("btn-add").addEventListener("click", function () {
   let FruitName = document.getElementById("txtFruit").value;
   let FruitPrice = document.getElementById("txtPrice").value;
+  let FruitPhoto = document.getElementById("txtPhoto").value;
 
-  let arrFruit = [FruitName, FruitPrice];
+  let arrFruit = [FruitName, FruitPrice, FruitPhoto];
 
   arrFruits.push(arrFruit);
 
-  let table = `<table class='table table-striped'>
-              <tr>
-                <th>Fruit</th>
-                <th>Price</th>
-              </tr>
-            `;
-
+  let table = ``;
   for (let index = 0; index < arrFruits.length; index++) {
-    table += `<tr>`;
-    table += `<td>${arrFruits[index][0]}</td>`;
-    table += `<td>${arrFruits[index][1]}</td>`;
-    table += `</tr>`;
+    table += `<div class="card" style="width: 18rem;">
+                <img src="${arrFruits[index][2]}" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">${arrFruits[index][0]}</h5>
+                  <p class="card-text">${arrFruits[index][1]}</p>
+                  <a href="#" class="btn btn-primary">Add To Card</a>
+                </div>
+              </div>`;
   }
-
-  table += `</table>`;
-
   document.getElementById("data").innerHTML = table;
 
   document.getElementById("txtFruit").value = "";
   document.getElementById("txtPrice").value = "";
+  document.getElementById("txtPhoto").value = "";
 
   document.getElementById("txtFruit").focus();
 });
