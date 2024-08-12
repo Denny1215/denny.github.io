@@ -45,6 +45,39 @@ let studentName = arrStudents[0];
 //   ["Guyabano", 150],
 // ];
 
+// let arrFruits = [];
+// document.getElementById("btn-add").addEventListener("click", function () {
+//   let FruitName = document.getElementById("txtFruit").value;
+//   let FruitPrice = document.getElementById("txtPrice").value;
+//   let FruitPhoto = document.getElementById("txtPhoto").value;
+
+//   let arrFruit = [FruitName, FruitPrice, FruitPhoto];
+
+//   arrFruits.push(arrFruit);
+
+//   let table = `<div class="row g-3">`;
+//   for (let index = 0; index < arrFruits.length; index++) {
+
+    
+//     table += `<div class="card" style="width: 18rem;">
+//                 <img src="${arrFruits[index][2]}" class="card-img-top">
+//                 <div class="card-body">
+//                   <h5 class="card-title">${arrFruits[index][0]}</h5>
+//                   <p class="card-text">${arrFruits[index][1]}</p>
+//                   <a href="#" class="btn btn-primary">Add To Card</a>
+//                 </div>
+//               </div>`;
+//   }
+//   document.getElementById("data").innerHTML = table;
+
+//   document.getElementById("txtFruit").value = "";
+//   document.getElementById("txtPrice").value = "";
+//   document.getElementById("txtPhoto").value = "";
+
+//   document.getElementById("txtFruit").focus();
+// });
+
+
 let arrFruits = [];
 document.getElementById("btn-add").addEventListener("click", function () {
   let FruitName = document.getElementById("txtFruit").value;
@@ -52,20 +85,23 @@ document.getElementById("btn-add").addEventListener("click", function () {
   let FruitPhoto = document.getElementById("txtPhoto").value;
 
   let arrFruit = [FruitName, FruitPrice, FruitPhoto];
-
   arrFruits.push(arrFruit);
 
-  let table = ``;
+  let table = `<div class="row">`;
   for (let index = 0; index < arrFruits.length; index++) {
-    table += `<div class="card" style="width: 18rem;">
-                <img src="${arrFruits[index][2]}" class="card-img-top">
-                <div class="card-body">
-                  <h5 class="card-title">${arrFruits[index][0]}</h5>
-                  <p class="card-text">${arrFruits[index][1]}</p>
-                  <a href="#" class="btn btn-primary">Add To Card</a>
-                </div>
-              </div>`;
+    table += `
+      <div class="col-3">
+        <div class="card shadow-sm" style="width: 100%; border-radius: 10px; margin-top: 20px; overflow: hidden;">
+          <img src="${arrFruits[index][2]}" class="card-img-top img-fluid" alt="${arrFruits[index][0]}" style="height: 250px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title" style="color: #343a40;">${arrFruits[index][0]}</h5>
+            <p class="card-text" style="color: #6c757d;">$${arrFruits[index][1]}</p>
+            <a href="#" class="btn btn-primary" style="background-color: #007bff; border: none;">Add To Card</a>
+          </div>
+        </div>
+      </div>`;
   }
+  table += `</div>`;
   document.getElementById("data").innerHTML = table;
 
   document.getElementById("txtFruit").value = "";
@@ -77,18 +113,18 @@ document.getElementById("btn-add").addEventListener("click", function () {
 
 //string to array
 
-let Address = "1210 ME Brgy Halang Calamba Laguna";
-let arrAddress = Address.split(" ");
-console.log(arrAddress);
+// let Address = "1210 ME Brgy Halang Calamba Laguna";
+// let arrAddress = Address.split(" ");
+// console.log(arrAddress);
 
 // array to string
-let arrSkills = [
-  "Driving",
-  "Video Editing",
-  "Basketball",
-  "Swimming",
-  "Volleyball",
-];
+// let arrSkills = [
+//   "Driving",
+//   "Video Editing",
+//   "Basketball",
+//   "Swimming",
+//   "Volleyball",
+// ];
 
-let Skills = arrSkills.join(" | ");
-console.log(Skills);
+// let Skills = arrSkills.join(" | ");
+// console.log(Skills);

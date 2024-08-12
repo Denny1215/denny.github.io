@@ -10,26 +10,41 @@
       crossorigin="anonymous"
     />
     <title>Arrays</title>
+    <style>
+      body {
+            background-color: rgb(246, 234, 11);
+            padding-top: 20px;
+        }
+        button {
+          margin-top: 2px;
+        }
+    </style>
+
+    
   </head>
   <body>
-    <div class="form-group">
-      <label for="">Fruit Name</label>
-      <input type="text" id="txtFruit" class="form-control">
-    </div>
+    <div class="container d-flex justify-content-center align-items-center">
+      <div class="w-100">
+        <div class="form-group mb-1">
+          <label for="txtFruit">Fruit Name</label>
+          <input type="text" id="txtFruit" class="form-control">
+        </div>
+        
+        <div class="form-group mb-1">
+          <label for="txtPrice">Fruit Price</label>
+          <input type="text" id="txtPrice" class="form-control">
+        </div>
     
-    <div class="form-group">
-      <label for="">Fruit Price</label>
-      <input type="text" id="txtPrice" class="form-control">
+        <div class="form-group mb-1">
+          <label for="txtPhoto">Fruit Photo</label>
+          <input type="text" id="txtPhoto" class="form-control">
+        </div>
+    
+        <button class="btn btn-primary w-100" id="btn-add">Add Fruit</button>
+    
+        <div id="data" class="mt-4"></div>
+      </div>
     </div>
-
-    <div class="form-group">
-      <label for="">Fruit Photo</label>
-      <input type="text" id="txtPhoto" class="form-control">
-    </div>
-
-    <button class="btn btn-primary" id="btn-add">Add Fruit</button>
-
-    <div class="" id="data"></div>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
