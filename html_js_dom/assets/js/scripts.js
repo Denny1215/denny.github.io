@@ -13,18 +13,25 @@
 
 //for (variable of array_variable)
 
-// let elements = document.querySelectorAll(".btn");
-// for (const element of elements) {
-//   let elemBgColor = element.className;
-//   element.addEventListener("click", function () {
-//     changeColor(elemBgColor);
-//   });
-// }
-document.querySelector("#btn-danger").addEventListener("click", function () {
-  changeColor("#dc3545");
+let elements = document.querySelectorAll(".btn-colors"); //DOM selecting elements
+for (let elem of elements) {
+  elem.addEventListener("click", function () {
+    let bgColor = elem.getAttribute("data-bg");
+    let id = elem.getAttribute("id");
+    changeColor(bgColor);
+  });
+}
+
+document.querySelector("#btn-add").addEventListener("click", function () {
+  let btn = document.createElement("input");
+  btn.className = "form-control mt-2";
+  btn.placeholder = "New Item";
+
+  document.querySelector("#div-buttons").append(btn);
 });
 
 function changeColor(backColor) {
+  console.log(backColor);
   document.getElementById("body").style.backgroundColor = backColor;
 }
 
