@@ -1,0 +1,32 @@
+*****************************************************
+Date	:	2024-09-06
+Time	:	01:55:57 am
+EMSG	:	This is the error message 
+FILE	:	C:\laragon\www\fullstack_training\denny.github.io\php\default_functions\filesystem.php
+LINE	:	11
+*****************************************************
+
+*****************************************************
+Date	:	2024-09-06
+Time	:	01:56:02 am
+EMSG	:	This is the error message 
+FILE	:	C:\laragon\www\fullstack_training\denny.github.io\php\default_functions\filesystem.php
+LINE	:	11
+*****************************************************
+
+*****************************************************
+Date	:	2024-09-06
+Time	:	01:56:43 am
+EMSG	:	This is the error message 
+FILE	:	C:\laragon\www\fullstack_training\denny.github.io\php\default_functions\filesystem.php
+LINE	:	11
+*****************************************************
+
+*****************************************************
+Date	:	2024-09-06
+Time	:	01:59:45 am
+EMSG	:	This is the error message 
+FILE	:	C:\laragon\www\fullstack_training\denny.github.io\php\default_functions\filesystem.php
+LINE	:	11
+*****************************************************
+
