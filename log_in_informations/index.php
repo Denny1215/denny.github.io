@@ -1,27 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <link rel="stylesheet" href="assets/bootstrap-5/css/bootstrap.min.css" />
 </head>
 <style>
-  body {
+body {
     display: flex;
     background-image: url(images/leaves.jpg);
     height: 100vh;
     background-size: cover;
 }
-
-
-
 </style>
 
 <body>
@@ -29,7 +23,7 @@
         <div class="row mt-5">
             <div class="col-md-4"></div>
             <div class="col-md-4 bg-info p-3" style="border-radius: 20px;">
-                <form action="Log_in.php" method="POST">
+                <form action="log_in.php" method="POST">
                     <label for="email">Email:</label><br>
                     <input type="text" class="form-control" id="email" name="email"><br>
                     <label for="pword">Password:</label><br>
@@ -41,9 +35,9 @@
             </div>
         </div>
     </div>
-  </div> 
-    
-    
+    </div>
+
+
     <!-- <div class="container"></div>
         <div class="row mt-5">
             <div class="col-md-4 bg-info p-3">
@@ -93,4 +87,5 @@
         </div>
     </div> -->
 </body>
+
 </html>
