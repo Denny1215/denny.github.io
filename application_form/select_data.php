@@ -33,8 +33,8 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <table class="table table-responsive table-hover">
+            <div class="col-md-12 table-responsive">
+                <table class="table  table-hover">
                     <thead>
                         <th>ParentFirstName</th>
                         <th>ParentLastName</th>
@@ -48,6 +48,7 @@
                         <th>Region</th>
                         <th>PostalZipCode</th>
                         <th>phoneNumber</th>
+                        <th>Actions</th>
                     </thead>
                     <tbody>
                         <?php
@@ -68,6 +69,15 @@
                                         <td>".$rows['Region']."</td>
                                         <td>".$rows['PostalZipCode']."</td>
                                         <td>".$rows['phoneNumber']."</td>
+                                        <td>
+                                            <a href='#' class='btn btn-success'>
+                                                Edit
+                                            </a>
+
+                                            <a href='#' class='btn btn-danger'>
+                                                Delete
+                                            </a>
+                                        </td>
 
                                     </tr>";
                                 }
