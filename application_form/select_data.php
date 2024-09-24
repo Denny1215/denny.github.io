@@ -38,6 +38,16 @@
                     <thead>
                         <th>ParentFirstName</th>
                         <th>ParentLastName</th>
+                        <th>childAge</th>
+                        <th>ChildFirstName</th>
+                        <th>ChildLastName</th>
+                        <th>previousSchool</th>
+                        <th>homeAddress1</th>
+                        <th>homeAddress2</th>
+                        <th>City</th>
+                        <th>Region</th>
+                        <th>PostalZipCode</th>
+                        <th>phoneNumber</th>
                     </thead>
                     <tbody>
                         <?php
@@ -48,6 +58,17 @@
                                     echo "<tr>
                                         <td>".$rows['ParentFirstName']."</td>
                                         <td>".$rows['ParentLastName']."</td>
+                                        <td>".$rows['childAge']."</td>
+                                        <td>".$rows['ChildFirstName']."</td>
+                                        <td>".$rows['ChildLastName']."</td>
+                                        <td>".$rows['previousSchool']."</td>
+                                        <td>".$rows['homeAddress1']."</td>
+                                        <td>".$rows['homeAddress2']."</td>
+                                        <td>".$rows['City']."</td>
+                                        <td>".$rows['Region']."</td>
+                                        <td>".$rows['PostalZipCode']."</td>
+                                        <td>".$rows['phoneNumber']."</td>
+
                                     </tr>";
                                 }
                             }
