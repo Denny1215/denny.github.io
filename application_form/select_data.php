@@ -56,6 +56,7 @@
                             if ($count > 0) {
                                 
                                 while($rows = mysqli_fetch_array($eSelect)) {
+                                    $id = $rows['id'];
                                     echo "<tr>
                                         <td>".$rows['ParentFirstName']."</td>
                                         <td>".$rows['ParentLastName']."</td>
@@ -70,19 +71,20 @@
                                         <td>".$rows['PostalZipCode']."</td>
                                         <td>".$rows['phoneNumber']."</td>
                                         <td>
-                                            <a href='#' class='btn btn-success'>
-                                                Edit
-                                            </a>
-
-                                            <a href='#' class='btn btn-danger'>
-                                                Delete
-                                            </a>
-                                        </td>
-
-                                    </tr>";
+                                        <a href='edit.php?id=$id' class='btn btn-success'>
+                                            Edit
+                                        </a>
+                                        <a href='delete.php?id=$id' class='btn btn-danger' 
+                                        onclick=\"return confirm('Are you sure you want to delete this record?');\">
+                                            Delete
+                                        </a>
+                                    </td>
+                                </tr>";
+                                    }
+                                } 
+                                else {
+                                    echo "No data found";
                                 }
-                            }
-                        
                         ?>
                     </tbody>
                 </table>
