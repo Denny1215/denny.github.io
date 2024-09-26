@@ -1,13 +1,10 @@
 <?php
-
     $db = mysqli_connect("localhost", "root", "");
     if ($db === false) {
         die("Can't connect to the database!");
     }
 
     $qSelect = "SELECT * FROM `db_denny_training`.`application_form`";
-        
-        
     $eSelect = mysqli_query($db, $qSelect);
     if ($eSelect == false) {
         die("Failed to fetch data!");
@@ -36,6 +33,7 @@
             <div class="col-md-12 table-responsive">
                 <table class="table  table-hover">
                     <thead>
+                        <th>ID</th>
                         <th>ParentFirstName</th>
                         <th>ParentLastName</th>
                         <th>childAge</th>
@@ -54,10 +52,10 @@
                         <?php
                         
                             if ($count > 0) {
-                                
                                 while($rows = mysqli_fetch_array($eSelect)) {
                                     $id = $rows['id'];
                                     echo "<tr>
+                                        <td>".$id."</td>
                                         <td>".$rows['ParentFirstName']."</td>
                                         <td>".$rows['ParentLastName']."</td>
                                         <td>".$rows['childAge']."</td>
@@ -74,20 +72,18 @@
                                         <a href='edit.php?id=$id' class='btn btn-success'>
                                             Edit
                                         </a>
-                                        <a href='delete.php?id=$id' class='btn btn-danger' 
-                                        onclick=\"return confirm('Are you sure you want to delete this record?');\">
+                                        <a href='delete.php?id=$id' class='btn btn-danger'>
                                             Delete
                                         </a>
                                     </td>
                                 </tr>";
                                     }
                                 } 
-                                else {
-                                    echo "No data found";
-                                }
+
                         ?>
                     </tbody>
                 </table>
+
             </div>
         </div>
     </div>

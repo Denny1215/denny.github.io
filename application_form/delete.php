@@ -1,6 +1,8 @@
 <?php
 
-    // Connection to the MySQL server
+    $id = $_GET['id'];
+
+    // // Connection to the MySQL server
     $db = mysqli_connect("localhost", "root", "");
     
     // Checking connection
@@ -8,20 +10,20 @@
         die("Can't connect to the database");
     }
 
-    // Query to delete a specific record
+    // // Query to delete a specific record
     $qdelete = "DELETE FROM `db_denny_training`.`application_form` 
-    WHERE id = 11";
+    WHERE id = $id";
         
-    // Execution of the delete query
+    // // Execution of the delete query
     $edelete = mysqli_query($db, $qdelete);
 
-    // Checking if the query execution was successful
+    // // Checking if the query execution was successful
     if ($edelete === false) {
         die("Failed to delete data");
     }
     
-    // Redirect to another page after successful deletion
+    // // Redirect to another page after successful deletion
     header("Location: select_data.php");
-    exit();
+    // exit();
 
 ?>

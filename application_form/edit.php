@@ -1,3 +1,23 @@
+<?php
+
+    $id = $_GET['id'];
+
+    $db = mysqli_connect("localhost", "root", "");
+
+    if ($db === false) {
+        die("Can't connect to the database");
+    }
+
+    $qSearch = "SELECT * FROM `db_denny_training`.`application_form` WHERE id = $id";
+    $eSearch = mysqli_query($db, $qSearch);
+
+    if ($eSearch === false) {
+        die("Failed to delete data");
+    }
+
+    $row = mysqli_fetch_array($eSearch);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,22 +51,23 @@
 <body>
     <div class="container form-container">
         <h2 class="text-center mb-4">Private School Application Form</h2>
-        <form action="forms.php" method="POST">
+        <form action="update.php" method="POST">
             <div class="row mb-3">
                 <label for="parentName" class="form-label">Parent/guardian name:</label>
                 <div class="col">
                     <input type="text" class="form-control" id="ParentFirstName" name="ParentFirstName"
-                        placeholder="First" aria-label="First name">
+                        placeholder="First" aria-label="First name" value="<?php echo $row['ParentFirstName']?>">
                 </div>
                 <div class="col">
                     <input type="text" class="form-control" id="ParentLastName" name="ParentLastName" placeholder="Last"
-                        aria-label="Last name">
+                        aria-label="Last name" value="<?php echo $row['ParentLastName']?>">
                 </div>
             </div>
             <div class="mb-3">
                 <label for="childAge" class="form-label">How old your child will be when they start out the school
                     year:</label>
-                <input type="number" class="form-control" id="childAge" name="childAge" placeholder="">
+                <input type="number" class="form-control" id="childAge" name="childAge" placeholder=""
+                    value="<?php echo $row['childAge']?>">
             </div>
             <div class="row mb-3">
                 <label for="childName" class="form-label">Child name:</label>
@@ -93,7 +114,7 @@
                 <label for="phoneNumber" class="form-label">Phone number:</label>
                 <input type="tellephoneNo." class="form-control" id="phoneNumber" name="phoneNumber" placeholder="#">
             </div>
-            <button type="submit" class="btn btn-primary w-100">Submit</button>
+            <button type="submit" class="btn btn-primary w-100">UPDATE</button>
         </form>
     </div>
 
