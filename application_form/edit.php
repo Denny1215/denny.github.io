@@ -52,6 +52,8 @@
     <div class="container form-container">
         <h2 class="text-center mb-4">Private School Application Form</h2>
         <form action="update.php" method="POST">
+            <input type="hidden" class="form-control" id="applicantID" name="applicantID"
+            placeholder="First" aria-label="First name" value="<?php echo $row['id']?>">
             <div class="row mb-3">
                 <label for="parentName" class="form-label">Parent/guardian name:</label>
                 <div class="col">
@@ -66,42 +68,45 @@
             <div class="mb-3">
                 <label for="childAge" class="form-label">How old your child will be when they start out the school
                     year:</label>
-                <input type="number" class="form-control" id="childAge" name="childAge" placeholder=""
+                <input type="number" class="form-control" id="chldAge" name="childAge" placeholder=""
                     value="<?php echo $row['childAge']?>">
             </div>
             <div class="row mb-3">
                 <label for="childName" class="form-label">Child name:</label>
                 <div class="col">
                     <input type="text" class="form-control" id="ChildFirstName" name="ChildFirstName"
-                        placeholder="First" aria-label="First name">
+                        placeholder="First" aria-label="First name" value="<?php echo $row['ChildFirstName']?>">
                 </div>
                 <div class="col">
                     <input type="text" class="form-control" id="ChildLastName" name="ChildLastName" placeholder="Last"
-                        aria-label="Last name">
+                        aria-label="Last name" value="<?php echo $row['ChildLastName']?>">
                 </div>
             </div>
             <div class="mb-3">
                 <label for="previousSchool" class="form-label">The school he comes from:</label>
-                <input type="text" class="form-control" id="previousSchool" name="previousSchool" placeholder="">
+                <input type="text" class="form-control" id="previousSchool" name="previousSchool" placeholder="" 
+                value="<?php echo $row['previousSchool']?>">
             </div>
             <div class="mb-3">
                 <label for="homeAddress" class="form-label">Home address:</label>
                 <input type="text" class="form-control mb-2" id="homeAddress1" name="homeAddress1"
-                    placeholder="Street Address">
+                    placeholder="Street Address" value="<?php echo $row['homeAddress1']?>">
                 <input type="text" class="form-control mb-2" id="homeAddress2" name="homeAddress2"
-                    placeholder="Street Address Line 2">
+                    placeholder="Street Address Line 2" value="<?php echo $row['homeAddress2']?>">
                 <div class="row">
                     <div class="col">
-                        <input type="text" class="form-control" id="City" name="City" placeholder="City">
+                        <input type="text" class="form-control" id="City" name="City" placeholder="City"
+                        value="<?php echo $row['City']?>">
                     </div>
                     <div class="col">
-                        <input type="text" class="form-control" id="Region" name="Region" placeholder="Region">
+                        <input type="text" class="form-control" id="Region" name="Region" placeholder="Region"
+                        value="<?php echo $row['Region']?>">
                     </div>
                 </div>
                 <div class="row mt-2">
                     <div class="col">
                         <input type="text" class="form-control" id="PostalZipCode" name="PostalZipCode"
-                            placeholder="Postal / Zip Code">
+                            placeholder="Postal / Zip Code" value="<?php echo $row['PostalZipCode']?>">
                     </div>
                     <div class="col">
                         <select class="form-select">
@@ -112,7 +117,8 @@
             </div>
             <div class="mb-3">
                 <label for="phoneNumber" class="form-label">Phone number:</label>
-                <input type="tellephoneNo." class="form-control" id="phoneNumber" name="phoneNumber" placeholder="#">
+                <input type="tellephoneNo." class="form-control" id="phoneNumber" name="phoneNumber" placeholder="#"
+                value="<?php echo $row['phoneNumber']?>">
             </div>
             <button type="submit" class="btn btn-primary w-100">UPDATE</button>
         </form>
@@ -121,4 +127,4 @@
 
 </body>
 
-</html>
+</html>i
